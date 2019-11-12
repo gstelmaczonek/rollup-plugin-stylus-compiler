@@ -12,6 +12,17 @@ export default function (options = {}) {
   // structure: {[compiledId]: [compiledContent]}
   const compiledCache = {}
 
+  let preCompileFn;
+  if (options.rootClass) {
+      preCompileFn = function(code) {
+          return "." + options.rootClass + " { " + code + " }";
+      }
+  } else {
+      preCompileFn = function (code) {
+          return code;
+      }
+  }
+
   /** API : https://rollupjs.org/guide/en#hooks */
   return {
     name: 'rollup-plugin-stylus-compiler',
@@ -28,7 +39,7 @@ export default function (options = {}) {
       if (!filter(id)) return
       return new Promise(function (resolve, reject) {
         const relativePath = path.relative(process.cwd(), id)
-        stylus(code, options.compiler)
+        stylus(preCompileFn(code), options.compiler)
           .set('filename', relativePath)
           .render(function (err, css) {
             if (err) reject(err)

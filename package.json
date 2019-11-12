@@ -1,7 +1,7 @@
 {
-  "name": "rollup-plugin-stylus-compiler",
-  "version": "1.0.1",
-  "author": "RJ.Hwang <rongjihuang@gmail.com>",
+  "name": "rollup-plugin-stylus-compiler-root-class",
+  "version": "0.0.1",
+  "author": "qgs <QGS@kmd.dk>",
   "description": "A rollup plugin to compile stylus",
   "keywords": [
     "rollup",
@@ -17,13 +17,13 @@
   "license": "MIT",
   "main": "dist/rollup-plugin-stylus-compiler.cjs.js",
   "jsnext:main": "dist/rollup-plugin-stylus-compiler.es.js",
-  "homepage": "https://github.com/RJHwang/rollup-plugin-stylus-compiler",
+  "homepage": "https://github.com/gstelmaczonek/rollup-plugin-stylus-compiler",
   "bugs": {
-    "url": "https://github.com/RJHwang/rollup-plugin-stylus-compiler/issues"
+    "url": "https://github.com/gstelmaczonek/rollup-plugin-stylus-compiler/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RJHwang/rollup-plugin-stylus-compiler.git"
+    "url": "https://github.com/gstelmaczonek/rollup-plugin-stylus-compiler.git"
   },
   "scripts": {
     "clean": "rm -rf dist test/temp",

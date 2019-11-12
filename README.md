@@ -1,4 +1,4 @@
-# rollup-plugin-stylus-compiler
+# rollup-plugin-stylus-compiler-root-class
 
 A rollup plugin to compile stylus file (`.styl or .stylus`) to css file. This plugin only integrates [stylus](https://github.com/stylus/stylus) to do the compile job.
 Need other plugin to deal with the compiled css content. Such as:
@@ -20,15 +20,15 @@ Supported rollup version :
 Use `npm`:
 
 ```bash
-npm install --save-dev rollup-plugin-stylus-compiler
+npm install --save-dev rollup-plugin-stylus-compiler-root-class
 // or
-npm i -D rollup-plugin-stylus-compiler
+npm i -D rollup-plugin-stylus-compiler-root-class
 ```
 
 Use `yarn`:
 
 ```bash
-yarn add rollup-plugin-stylus-compiler --dev
+yarn add rollup-plugin-stylus-compiler-root-class --dev
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ yarn add rollup-plugin-stylus-compiler --dev
 
 ```js
 import { rollup } from 'rollup';
-import stylus from 'rollup-plugin-stylus-compiler';
+import stylus from 'rollup-plugin-stylus-compiler-root-class';
 import css from 'rollup-plugin-css-porter';
 
 rollup({
@@ -57,7 +57,7 @@ Output `bundle.css` and `bundle.min.css`.
 
 ```js
 import { rollup } from 'rollup';
-import stylus from 'rollup-plugin-stylus-compiler';
+import stylus from 'rollup-plugin-stylus-compiler-root-class';
 import postcss from 'rollup-plugin-postcss';
 
 rollup({
@@ -78,7 +78,7 @@ Inline css to `bundle.js`.
 
 ```js
 import { rollup } from 'rollup';
-import stylus from 'rollup-plugin-stylus-compiler';
+import stylus from 'rollup-plugin-stylus-compiler-root-class';
 import css from 'rollup-plugin-css-only';
 
 rollup({
